@@ -1,7 +1,7 @@
 Hi 👋, I'm **Kyuyeon Park (Kyu)** from South Korea🇰🇷   
 \
-As an aspiring **AI Data Engineer**,  
-I'm passionate about building efficient and scalable data pipelines that drive innovation in the AI industry.
+
+`#AI`, `#Machine_Learning`, `#Data_Engineering`
 
 ---
 
