@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyuyeon Park — AI Agent Engineer</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#141412;
+  --bg2:#1C1C19;
+  --bg3:#242420;
+  --cream:#F0EBE0;
+  --cream2:#C8C2B4;
+  --cream3:#7A7570;
+  --red:#E8501E;
+  --gold:#C8A44A;
+  --border:rgba(240,235,224,0.1);
+  --border2:rgba(240,235,224,0.18);
+  --serif:Georgia,'Times New Roman',Times,serif;
+  --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --mono:'Courier New',Courier,monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:var(--sans);overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  padding:0 3rem;height:52px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-bottom:1px solid var(--border);
+  background:rgba(20,20,18,0.94);
+  backdrop-filter:blur(10px);
+}
+.nav-logo{font-family:var(--serif);font-size:1.05rem;font-style:italic;text-decoration:none;color:var(--cream)}
+.nav-links{display:flex;gap:2.5rem}
+.nav-links a{color:var(--cream3);text-decoration:none;font-size:0.7rem;letter-spacing:0.13em;text-transform:uppercase;transition:color 0.15s;font-family:var(--mono)}
+.nav-links a:hover{color:var(--cream)}
+.nav-meta{font-family:var(--mono);font-size:0.65rem;color:var(--cream3)}
+
+/* HERO */
+.hero{
+  padding:5.5rem 3rem 4.5rem;
+  border-bottom:1px solid var(--border2);
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:5rem;
+  align-items:end;
+}
+.hero-kicker{
+  font-family:var(--mono);font-size:0.65rem;
+  color:var(--red);letter-spacing:0.2em;text-transform:uppercase;
+  margin-bottom:2rem;display:flex;align-items:center;gap:1rem;
+}
+.hero-kicker::before{content:'';width:24px;height:1px;background:var(--red)}
+h1.hero-title{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(3.8rem,8vw,7rem);
+  line-height:0.9;letter-spacing:-0.02em;
+  margin-bottom:2.2rem;color:var(--cream);
+}
+h1.hero-title em{font-style:italic;color:var(--cream2)}
+h1.hero-title .accent{color:var(--red);font-style:italic}
+.hero-deck{
+  font-family:var(--serif);font-size:1.05rem;font-style:italic;
+  line-height:1.7;color:var(--cream2);margin-bottom:2.5rem;
+  border-left:2px solid var(--red);padding-left:1.2rem;
+  max-width:520px;
+}
+.hero-byline{
+  font-family:var(--mono);font-size:0.65rem;color:var(--cream3);
+  letter-spacing:0.1em;text-transform:uppercase;
+  display:flex;gap:2rem;margin-bottom:2.5rem;
+}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn{
+  padding:0.75rem 1.8rem;
+  font-family:var(--mono);font-size:0.68rem;
+  text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;
+  transition:all 0.15s;cursor:pointer;border:none;display:inline-block;
+}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:#CC4418}
+.btn-outline{border:1px solid var(--border2);color:var(--cream2);background:transparent}
+.btn-outline:hover{border-color:var(--cream);color:var(--cream);background:rgba(240,235,224,0.04)}
+
+.hero-sidebar{border-left:1px solid var(--border);padding-left:2.5rem}
+.stat-row{padding:1.4rem 0;border-bottom:1px solid var(--border)}
+.stat-row:first-child{border-top:1px solid var(--border)}
+.stat-num{
+  font-family:var(--serif);font-size:3rem;font-style:italic;font-weight:400;
+  line-height:1;color:var(--cream);margin-bottom:0.3rem;
+}
+.stat-num em{color:var(--red);font-style:normal}
+.stat-label{font-family:var(--mono);font-size:0.6rem;color:var(--cream3);letter-spacing:0.12em;text-transform:uppercase}
+
+/* SECTIONS */
+.section{padding:4.5rem 3rem}
+.section-header{
+  display:grid;grid-template-columns:140px 1fr;
+  gap:2rem;align-items:baseline;
+  border-top:1px solid var(--border2);padding-top:1.2rem;margin-bottom:3rem;
+}
+.section-num{font-family:var(--mono);font-size:0.62rem;color:var(--cream3);letter-spacing:0.12em}
+.section-title{font-family:var(--serif);font-size:1.9rem;font-style:italic;font-weight:400;color:var(--cream)}
+
+/* EXPERIENCE */
+.exp-item{
+  display:grid;grid-template-columns:150px 1fr;
+  gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--border);
+}
+.exp-company{font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--cream);margin-bottom:0.3rem}
+.exp-role{font-family:var(--mono);font-size:0.6rem;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.6rem}
+.exp-period{font-family:var(--mono);font-size:0.6rem;color:var(--cream3);line-height:1.7}
+.exp-lead{font-family:var(--serif);font-size:1rem;font-style:italic;line-height:1.65;color:var(--cream);margin-bottom:1rem}
+.exp-detail{font-size:0.84rem;line-height:1.75;color:var(--cream2)}
+.exp-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+.tag{padding:0.2rem 0.6rem;border:1px solid var(--border);font-family:var(--mono);font-size:0.6rem;color:var(--cream3);background:var(--bg2)}
+
+/* ACHIEVEMENTS */
+.ach-band{background:var(--bg2);margin:0 -3rem;padding:3.5rem 3rem;border-top:1px solid var(--border2);border-bottom:1px solid var(--border2)}
+.ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);margin-top:2rem}
+.ach-card{background:var(--bg2);padding:2.5rem;transition:background 0.2s}
+.ach-card:hover{background:var(--bg3)}
+.ach-rank{font-family:var(--serif);font-size:4rem;font-style:italic;font-weight:400;line-height:1;margin-bottom:1rem}
+.ach-rank.gold{color:var(--gold)}
+.ach-rank.silver{color:#9AABB8}
+.ach-title-text{font-size:0.9rem;font-weight:600;color:var(--cream);margin-bottom:0.5rem;font-family:var(--sans)}
+.ach-sub{font-family:var(--mono);font-size:0.6rem;color:var(--cream3);letter-spacing:0.04em;line-height:1.6}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border)}
+.project-card{background:var(--bg);padding:2.5rem;transition:background 0.2s;position:relative;overflow:hidden}
+.project-card::after{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(--red);transform:scaleY(0);transform-origin:top;transition:transform 0.3s}
+.project-card:hover{background:var(--bg2)}
+.project-card:hover::after{transform:scaleY(1)}
+.project-index{font-family:var(--serif);font-size:4.5rem;font-style:italic;color:rgba(240,235,224,0.06);line-height:1;margin-bottom:0.3rem}
+.project-title{font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--cream);margin-bottom:0.8rem}
+.project-desc{font-size:0.83rem;line-height:1.75;color:var(--cream2)}
+.project-metric-wrap{margin-top:1.8rem;border-top:1px solid var(--border);padding-top:1rem}
+.project-metric{font-family:var(--serif);font-size:2.2rem;font-style:italic;color:var(--red);line-height:1}
+.project-metric-label{font-family:var(--mono);font-size:0.6rem;color:var(--cream3);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.3rem}
+
+/* SKILLS */
+.skills-section{background:var(--bg2)}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.skill-block{background:var(--bg2);padding:2rem}
+.skill-cat{font-family:var(--mono);font-size:0.6rem;color:var(--red);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;padding-bottom:0.7rem;border-bottom:1px solid var(--border)}
+.skill-list{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
+.skill-list li{font-size:0.82rem;color:var(--cream2);line-height:1.4}
+.skill-list li::before{content:'— ';color:var(--cream3);font-family:var(--mono)}
+
+/* CONTACT */
+.contact-section{
+  padding:5.5rem 3rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+  border-top:1px solid var(--border2);
+}
+.contact-headline{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4.2rem);font-weight:400;line-height:1.0}
+.contact-headline em{font-style:italic;color:var(--red)}
+.contact-links{display:flex;flex-direction:column}
+.contact-link{
+  display:flex;align-items:center;gap:1rem;padding:1.1rem 0;
+  border-bottom:1px solid var(--border);text-decoration:none;color:var(--cream);
+  transition:padding-left 0.2s;
+}
+.contact-link:first-child{border-top:1px solid var(--border)}
+.contact-link:hover{padding-left:0.8rem;color:var(--red)}
+.contact-link-label{font-family:var(--mono);font-size:0.6rem;color:var(--cream3);text-transform:uppercase;letter-spacing:0.12em;width:56px;flex-shrink:0}
+.contact-link-value{font-size:0.86rem;color:var(--cream2)}
+.contact-arrow{margin-left:auto;color:var(--cream3);transition:color 0.15s}
+.contact-link:hover .contact-arrow{color:var(--red)}
+
+/* FOOTER */
+footer{
+  padding:1.5rem 3rem;border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  background:var(--bg2);
+}
+.footer-copy{font-family:var(--mono);font-size:0.6rem;color:var(--cream3);letter-spacing:0.08em}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:2.5rem}
+  .hero-sidebar{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr)}
+  .stat-row{border:none;border-right:1px solid var(--border);padding:0 1.5rem 0 0}
+  .stat-row:last-child{border-right:none}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-section{grid-template-columns:1fr;gap:2.5rem}
+  .ach-grid{grid-template-columns:1fr}
+  nav{padding:0 1.5rem}
+  .section{padding:3rem 1.5rem}
+  .hero{padding:3.5rem 1.5rem 3rem}
+  .ach-band{margin:0 -1.5rem;padding:2.5rem 1.5rem}
+  footer{padding:1.5rem}
+}
+@media(max-width:580px){
+  .exp-item{grid-template-columns:1fr;gap:0.5rem}
+  .section-header{grid-template-columns:1fr;gap:0.3rem}
+  .skills-grid{grid-template-columns:1fr}
+  .hero-sidebar{grid-template-columns:1fr}
+  .stat-row{border-right:none;border-bottom:1px solid var(--border);padding:1rem 0}
+  .stat-row:first-child{border-top:1px solid var(--border)}
+  .nav-meta{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Kyuyeon Park</a>
+  <div class="nav-links">
+    <a href="#experience">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-meta">Seoul, KR &mdash; 2026</div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="hero-kicker">AI Agent Engineer</div>
+    <h1 class="hero-title">
+      Kyuyeon<br>
+      <em>Park</em><br>
+      <span class="accent">Builds.</span>
+    </h1>
+    <p class="hero-deck">
+      From data pipelines to production AI agents &mdash; I debug what others assume is working, ship systems that hold up under real traffic, and leave teams with tools they actually use.
+    </p>
+    <div class="hero-byline">
+      <span>Sendbird (YC W16)</span>
+      <span>BCG</span>
+      <span>LG AI Research</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="#experience" class="btn btn-outline">See my work</a>
+    </div>
+  </div>
+  <div class="hero-sidebar">
+    <div class="stat-row">
+      <div class="stat-num"><em>+21%</em></div>
+      <div class="stat-label">CSAT lift</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-num"><em>108&times;</em></div>
+      <div class="stat-label">Eval speedup</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-num"><em>70%</em></div>
+      <div class="stat-label">Storage cut</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section-header">
+    <div class="section-num">01 &mdash; Work</div>
+    <div class="section-title">Experience</div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-company">Sendbird</div>
+      <div class="exp-role">AI Agent Eng Intern</div>
+      <div class="exp-period">Dec 2025<br>&mdash; Mar 2026</div>
+    </div>
+    <div>
+      <p class="exp-lead">Shipped a production CS agent for Korea's largest food delivery platform and replaced 9-hour manual QA with a 5-minute automated evaluation pipeline.</p>
+      <p class="exp-detail">Diagnosed tool routing failures in a live system, consolidated proxy architecture from 2 to 1 tool call, and iteratively refined prompts via batch testing &mdash; pushing CSAT to 3.4/5 at 5% regional rollout (200&ndash;250 conversations/day). Built an LLM-as-a-judge evaluator scaling to 1,000+ conversations. Shipped a Slack/Jira/GitHub issue tracker adopted team-wide with zero onboarding.</p>
+      <div class="exp-tags">
+        <span class="tag">Claude Haiku</span><span class="tag">LLM Eval</span><span class="tag">Go</span><span class="tag">FastAPI</span><span class="tag">Production AI</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-company">BCG</div>
+      <div class="exp-role">Research Analyst</div>
+      <div class="exp-period">Oct 2025<br>&mdash; Dec 2025</div>
+    </div>
+    <div>
+      <p class="exp-lead">Found the real bug &mdash; RDB-to-VectorDB misrouting &mdash; that the team assumed was a prompt problem.</p>
+      <p class="exp-detail">Built a ReAct-based multi-agent LLM system for enterprise sales data consolidation. Traced end-to-end data flow across agent planning, tool routing, and DB layers. Shipped a domain-specific typo correction module at 95%+ accuracy, resolving 9 business-critical retrieval failures.</p>
+      <div class="exp-tags">
+        <span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">Multi-agent</span><span class="tag">PostgreSQL</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div>
+      <div class="exp-company">LG AI Research</div>
+      <div class="exp-role">AI Data Eng Intern</div>
+      <div class="exp-period">Dec 2023<br>&mdash; Dec 2024</div>
+    </div>
+    <div>
+      <p class="exp-lead">Rebuilt a monolithic crawl pipeline into a distributed system and cut cloud storage costs by 70%.</p>
+      <p class="exp-detail">Re-architected a 100M+ page Korean web crawling pipeline into a distributed K8s/Redis system with memory buffering and compression. Designed a 2-step vector search tool planning system, filtering a 120k QA dataset to 20k high-quality samples (83% reduction) to replace LLM fine-tuning.</p>
+      <div class="exp-tags">
+        <span class="tag">Kubernetes</span><span class="tag">Redis</span><span class="tag">Airflow</span><span class="tag">BigQuery</span><span class="tag">Vector DB</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ach-band" id="achievements">
+  <div class="section-header" style="margin-bottom:0">
+    <div class="section-num">02 &mdash; Awards</div>
+    <div class="section-title">Achievements</div>
+  </div>
+  <div class="ach-grid">
+    <div class="ach-card">
+      <div class="ach-rank gold">1st.</div>
+      <div class="ach-title-text">Minister of Science &amp; ICT Award</div>
+      <div class="ach-sub">The Big Contest 2023 &nbsp;&middot;&nbsp; 740+ competing teams<br>Aug &ndash; Oct 2023 &nbsp;&middot;&nbsp; ML-based dynamic pricing model</div>
+    </div>
+    <div class="ach-card">
+      <div class="ach-rank silver">2nd.</div>
+      <div class="ach-title-text">Regional Safety Data Analysis Competition</div>
+      <div class="ach-sub">2023 &nbsp;&middot;&nbsp; Traffic accident risk factor analysis<br>High-risk zone identification</div>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="projects">
+  <div class="section-header">
+    <div class="section-num">03 &mdash; Work</div>
+    <div class="section-title">Selected Projects</div>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-index">01</div>
+      <div class="project-title">Production CS AI Agent</div>
+      <p class="project-desc">End-to-end AI customer support agent for Korea's major food delivery platform. Replaced a GPT-4.1 legacy system with Claude Haiku + extended thinking. Diagnosed proxy bottlenecks and shipped targeted architecture fixes.</p>
+      <div class="project-metric-wrap">
+        <div class="project-metric">+21%</div>
+        <div class="project-metric-label">CSAT improvement (2.9 &rarr; 3.5)</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-index">02</div>
+      <div class="project-title">LLM-as-a-Judge Eval System</div>
+      <p class="project-desc">Decision-tree path conformance evaluator with a sliding window pointer mechanism. Replaced manual QA across 1,000+ conversations. Proactively transferred to the Tooling team after building a high-quality prototype.</p>
+      <div class="project-metric-wrap">
+        <div class="project-metric">9hr &rarr; 5min</div>
+        <div class="project-metric-label">Evaluation review time</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-index">03</div>
+      <div class="project-title">Web Crawl Pipeline @ Scale</div>
+      <p class="project-desc">Large-scale Korean web crawling pipeline feeding LLM pre-training data. Re-architected monolithic WARC builder into a distributed K8s/Redis system with memory buffering and compression.</p>
+      <div class="project-metric-wrap">
+        <div class="project-metric">70%</div>
+        <div class="project-metric-label">Cloud storage cost reduction</div>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-index">04</div>
+      <div class="project-title">Issue Tracker Automation</div>
+      <p class="project-desc">Go-based internal tool integrating Slack, Jira, and GitHub. Auto-generates tickets from Slack threads, links PRs, syncs states bidirectionally, and summarizes root causes via LLM.</p>
+      <div class="project-metric-wrap">
+        <div class="project-metric">Day 1</div>
+        <div class="project-metric-label">Team adoption, zero onboarding</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section skills-section" id="skills">
+  <div class="section-header">
+    <div class="section-num">04 &mdash; Toolkit</div>
+    <div class="section-title">Skills &amp; Tools</div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-block">
+      <div class="skill-cat">Languages</div>
+      <ul class="skill-list">
+        <li>Python</li><li>SQL / NoSQL</li><li>TypeScript</li><li>Go</li><li>Java</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <div class="skill-cat">AI / ML</div>
+      <ul class="skill-list">
+        <li>AI Agent Development</li><li>RAG</li><li>Prompt Engineering</li><li>LangChain / LangGraph</li><li>LLM Evaluation</li><li>Claude Code</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <div class="skill-cat">Data Engineering</div>
+      <ul class="skill-list">
+        <li>Airflow</li><li>Redis</li><li>Kubernetes</li><li>BigQuery</li><li>PostgreSQL / DynamoDB</li><li>Apache Superset</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <div class="skill-cat">Infrastructure</div>
+      <ul class="skill-list">
+        <li>Docker</li><li>AWS</li><li>GCP</li><li>FastAPI</li><li>n8n</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div>
+    <div style="font-family:var(--mono);font-size:0.62rem;color:var(--red);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1.8rem">05 &mdash; Contact</div>
+    <div class="contact-headline">
+      Let's build<br>
+      <em>something</em><br>
+      together.
+    </div>
+  </div>
+  <div>
+    <div class="contact-links">
+      <a href="mailto:qkrrbdus1859@gmail.com" class="contact-link">
+        <span class="contact-link-label">Email</span>
+        <span class="contact-link-value">qkrrbdus1859@gmail.com</span>
+        <span class="contact-arrow">&#8594;</span>
+      </a>
+      <a href="https://linkedin.com/in/kyuyeonpark" target="_blank" class="contact-link">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">linkedin.com/in/kyuyeonpark</span>
+        <span class="contact-arrow">&#8594;</span>
+      </a>
+      <a href="https://github.com/noooey" target="_blank" class="contact-link">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-value">github.com/noooey</span>
+        <span class="contact-arrow">&#8594;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-copy">&copy; 2026 Kyuyeon Park</div>
+  <div class="footer-copy">AI AGENT ENGINEER &nbsp;&middot;&nbsp; SEOUL, KR</div>
+</footer>
+
+</body>
+</html>
