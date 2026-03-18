@@ -15,4 +15,3 @@ _**LinkedIn;** Profile_
 </p>
 
 _**Tistory;** Technical blog for what I learned_
->>>>>>> da5b3ee18d00a537238f2782adc990c91792b492
