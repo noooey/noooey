@@ -205,6 +205,45 @@ footer{
   .stat-row:first-child{border-top:1px solid var(--border)}
   .nav-meta{display:none}
 }
+
+/* HOW I WORK */
+.hiw-section{background:var(--bg2)}
+.hiw-grid{
+  display:flex;flex-direction:column;
+  gap:2.5rem;
+}
+.hiw-lead{
+  font-family:var(--serif);font-size:1.25rem;font-style:italic;
+  line-height:1.55;color:var(--cream);margin-bottom:1.2rem;
+}
+.hiw-body{
+  font-size:0.86rem;line-height:1.8;color:var(--cream2);
+  margin-bottom:2rem;
+}
+.hiw-stack{display:flex;flex-direction:column;gap:0}
+.hiw-stack-item{
+  display:flex;align-items:baseline;gap:1.2rem;
+  padding:0.85rem 0;border-bottom:1px solid var(--border);
+}
+.hiw-stack-item:first-child{border-top:1px solid var(--border)}
+.hiw-stack-label{
+  font-family:var(--mono);font-size:0.6rem;color:var(--cream3);
+  text-transform:uppercase;letter-spacing:0.12em;width:100px;flex-shrink:0;
+}
+.hiw-stack-value{font-size:0.84rem;color:var(--cream)}
+.hiw-screenshot-wrap{display:flex;flex-direction:column;gap:0.7rem}
+.hiw-screenshot-label{
+  font-family:var(--mono);font-size:0.6rem;color:var(--cream3);
+  letter-spacing:0.06em;
+}
+.hiw-screenshot-frame{
+  border:1px solid var(--border2);overflow:hidden;
+  background:var(--bg3);
+}
+.hiw-screenshot-frame img{
+  display:block;width:100%;height:auto;
+}
+
 </style>
 </head>
 <body>
@@ -375,9 +414,42 @@ footer{
   </div>
 </section>
 
+<section class="section hiw-section" id="how-i-work">
+  <div class="section-header">
+    <div class="section-num">04 &mdash; Process</div>
+    <div class="section-title">How I Work</div>
+  </div>
+  <div class="hiw-grid">
+    <div class="hiw-text">
+      <p class="hiw-lead">I don't just use AI tools &mdash; I build with them as teammates.</p>
+      <p class="hiw-body">My agents have names, roles, and autonomy. Dev-Gorani handles code, diagnoses bugs end-to-end, and commits fixes directly. I describe the problem in natural language; it ships the diff.</p>
+      <div class="hiw-stack">
+        <div class="hiw-stack-item">
+          <span class="hiw-stack-label">Orchestration</span>
+          <span class="hiw-stack-value">Discord &times; Codex CLI &times; Claude-code</span>
+        </div>
+        <div class="hiw-stack-item">
+          <span class="hiw-stack-label">Agents</span>
+          <span class="hiw-stack-value">Leader-Gorani &middot; Dev-Gorani &middot; more</span>
+        </div>
+        <div class="hiw-stack-item">
+          <span class="hiw-stack-label">Loop</span>
+          <span class="hiw-stack-value">natural language in &rarr; commit out</span>
+        </div>
+      </div>
+    </div>
+    <div class="hiw-screenshot-wrap">
+      <div class="hiw-screenshot-label">// live session &mdash; Dev-Gorani diagnosing a mobile drag bug &amp; committing the fix</div>
+      <div class="hiw-screenshot-frame">
+        <img src="assets/hiw-screenshot.png" alt="Dev-Gorani live session screenshot">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section skills-section" id="skills">
   <div class="section-header">
-    <div class="section-num">04 &mdash; Toolkit</div>
+    <div class="section-num">05 &mdash; Toolkit</div>
     <div class="section-title">Skills &amp; Tools</div>
   </div>
   <div class="skills-grid">
@@ -410,7 +482,7 @@ footer{
 
 <section class="contact-section" id="contact">
   <div>
-    <div style="font-family:var(--mono);font-size:0.62rem;color:var(--red);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1.8rem">05 &mdash; Contact</div>
+    <div style="font-family:var(--mono);font-size:0.62rem;color:var(--red);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:1.8rem">06 &mdash; Contact</div>
     <div class="contact-headline">
       Let's build<br>
       <em>something</em><br>
