@@ -1,13 +1,13 @@
 <div align="center">
 
 ```text
-      /\_/\
-     ( •ᴗ• )      hi, i'm kyu!
-     / >☕
-  ┌─∪──────────────∪─┐
-  │  welcome to my    │
-  │  little github ♡  │
-  └───────────────────┘
+       /\_/\
+      ( o.o )  < hi, i'm kyu!
+       > ^ <
+  +----------------------+
+  | welcome to my little |
+  | github <3            |
+  +----------------------+
 ```
 
 # ⋆｡°✩ Kyuyeon Park ✩°｡⋆
