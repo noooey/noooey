@@ -1,17 +1,92 @@
-Hi 👋, I'm **Kyuyeon Park (Kyu)** from South Korea🇰🇷   
+README.md:15: trailing whitespace.
++**AI Product Engineer** in Seoul 🇰🇷  
+README.md:65: trailing whitespace.
++`Python` `SQL` `TypeScript` `Airflow` `Redis` `PostgreSQL`  
+README.md:66: trailing whitespace.
++`AI Agents` `RAG` `LLM Evaluation` `LangGraph`  
+README.md:67: trailing whitespace.
++`Docker` `Kubernetes` `GCP` `AWS`  
+<div align="center">
 
-`#AI`, `#Machine_Learning`, `#Data_Engineering`
+```text
+      /\_/\
+     ( •ᴗ• )      hi, i'm kyu!
+     / >☕
+  ┌─∪──────────────∪─┐
+  │  welcome to my    │
+  │  little github ♡  │
+  └───────────────────┘
+```
+
+# ⋆｡°✩ Kyuyeon Park ✩°｡⋆
+
+**AI Product Engineer** in Seoul 🇰🇷  
+data engineering roots 🌱 → production AI agents 🤖
+
+[୨୧ portfolio](https://noooey.vercel.app) · [୨୧ linkedin](https://www.linkedin.com/in/kyuyeonpark/) · [୨୧ blog](https://noooey.tistory.com)
+
+</div>
 
 ---
-  
-<p align="left">
-<a href="https://linkedin.com/in/kyuyeonpark" target="blank"><img align="center" src="https://raw.githubusercontent.com/CLorant/readme-social-icons/main/large/filled/linkedin.svg" alt="kyuyeonpark"/></a>
-</p>
 
-_**LinkedIn;** Profile_
+### 𐙚 my little career journey
 
-<p align="left">
-<a href="https://noooey.tistory.com" target="blank"><img align="center" src="https://www.basicincomeparty.kr/wp-content/uploads/2020/11/tistory-logo-fill.png", width="32" alt="noooey"/></a>
-</p>
+```text
+LG AI Research 🌱
+       │
+       ▼
+      BCG 🔎
+       │
+       ▼
+    Sendbird 🐥
+       │
+       ▼
+Integral Health 🩺  ← you are here!
+```
 
-_**Tistory;** Technical blog for what I learned_
+### 𐙚 tiny wins i keep in my pocket
+
+```text
+╭────────────────────────────────────────────╮
+│  ♡  CSAT                    2.9  →  3.5    │
+│  ♡  evaluation time         9 hr →  5 min  │
+│  ♡  cloud storage cost      100% →  30%    │
+│  ♡  The Big Contest         740+ →  1st    │
+╰────────────────────────────────────────────╯
+```
+
+### 𐙚 how my meetings become actual work
+
+```text
+meeting 🎧
+   └─ Alt transcript
+       └─ Claude Code skill ✨
+           └─ Obsidian meeting note 📚
+               └─ skill + Linear MCP
+                   └─ tiny, actionable ticket 🎫
+```
+
+<details>
+<summary><b>🧺 things in my toolbox</b></summary>
+<br>
+
+`Python` `SQL` `TypeScript` `Airflow` `Redis` `PostgreSQL`  
+`AI Agents` `RAG` `LLM Evaluation` `LangGraph`  
+`Docker` `Kubernetes` `GCP` `AWS`  
+`Obsidian` `Linear` `Claude Code` `Codex` `MCP`
+
+</details>
+
+<br>
+
+<div align="center">
+
+```text
+  ⋆｡‧˚ʚ♡ɞ˚‧｡⋆
+build it · break it · debug it · make it useful
+  ⋆｡‧˚ʚ♡ɞ˚‧｡⋆
+```
+
+thanks for stopping by! ૮ ˶ᵔ ᵕ ᵔ˶ ა
+
+</div>
