@@ -19,34 +19,6 @@ data engineering roots 🌱 → production AI agents 🤖
 
 </div>
 
----
-
-### 𐙚 my little career journey
-
-```text
-LG AI Research 🌱
-       │
-       ▼
-      BCG 🔎
-       │
-       ▼
-    Sendbird 🐥
-       │
-       ▼
-Integral Health 🩺  ← you are here!
-```
-
-### 𐙚 tiny wins i keep in my pocket
-
-```text
-╭────────────────────────────────────────────╮
-│  ♡  CSAT                    2.9  →  3.5    │
-│  ♡  evaluation time         9 hr →  5 min  │
-│  ♡  cloud storage cost      100% →  30%    │
-│  ♡  The Big Contest         740+ →  1st    │
-╰────────────────────────────────────────────╯
-```
-
 <br>
 
 <div align="center">
