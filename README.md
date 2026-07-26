@@ -47,28 +47,6 @@ Integral Health 🩺  ← you are here!
 ╰────────────────────────────────────────────╯
 ```
 
-### 𐙚 how my meetings become actual work
-
-```text
-meeting 🎧
-   └─ Alt transcript
-       └─ Claude Code skill ✨
-           └─ Obsidian meeting note 📚
-               └─ skill + Linear MCP
-                   └─ tiny, actionable ticket 🎫
-```
-
-<details>
-<summary><b>🧺 things in my toolbox</b></summary>
-<br>
-
-`Python` `SQL` `TypeScript` `Airflow` `Redis` `PostgreSQL`<br>
-`AI Agents` `RAG` `LLM Evaluation` `LangGraph`<br>
-`Docker` `Kubernetes` `GCP` `AWS`<br>
-`Obsidian` `Linear` `Claude Code` `Codex` `MCP`
-
-</details>
-
 <br>
 
 <div align="center">
