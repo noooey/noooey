@@ -1,11 +1,3 @@
-README.md:15: trailing whitespace.
-+**AI Product Engineer** in Seoul 🇰🇷  
-README.md:65: trailing whitespace.
-+`Python` `SQL` `TypeScript` `Airflow` `Redis` `PostgreSQL`  
-README.md:66: trailing whitespace.
-+`AI Agents` `RAG` `LLM Evaluation` `LangGraph`  
-README.md:67: trailing whitespace.
-+`Docker` `Kubernetes` `GCP` `AWS`  
 <div align="center">
 
 ```text
@@ -20,7 +12,7 @@ README.md:67: trailing whitespace.
 
 # ⋆｡°✩ Kyuyeon Park ✩°｡⋆
 
-**AI Product Engineer** in Seoul 🇰🇷  
+**AI Product Engineer** in Seoul 🇰🇷<br>
 data engineering roots 🌱 → production AI agents 🤖
 
 [୨୧ portfolio](https://noooey.vercel.app) · [୨୧ linkedin](https://www.linkedin.com/in/kyuyeonpark/) · [୨୧ blog](https://noooey.tistory.com)
@@ -70,9 +62,9 @@ meeting 🎧
 <summary><b>🧺 things in my toolbox</b></summary>
 <br>
 
-`Python` `SQL` `TypeScript` `Airflow` `Redis` `PostgreSQL`  
-`AI Agents` `RAG` `LLM Evaluation` `LangGraph`  
-`Docker` `Kubernetes` `GCP` `AWS`  
+`Python` `SQL` `TypeScript` `Airflow` `Redis` `PostgreSQL`<br>
+`AI Agents` `RAG` `LLM Evaluation` `LangGraph`<br>
+`Docker` `Kubernetes` `GCP` `AWS`<br>
 `Obsidian` `Linear` `Claude Code` `Codex` `MCP`
 
 </details>
