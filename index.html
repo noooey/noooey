@@ -808,13 +808,25 @@
 
     .recognition {
       display: grid;
-      grid-template-columns: 180px 1fr auto;
-      align-items: center;
+      grid-template-columns: 180px 1fr;
+      align-items: start;
       gap: 2rem;
       margin-top: 2rem;
       padding: 1.5rem;
       background: var(--soft-accent);
       border: 1px solid #ceceff;
+    }
+
+    .recognition-list {
+      display: grid;
+      gap: 0.95rem;
+    }
+
+    .recognition-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem 2rem;
+      align-items: baseline;
     }
 
     .recognition-label {
@@ -1184,6 +1196,11 @@
         text-align: left;
       }
 
+      .recognition-item {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+      }
+
       .toolkit-grid {
         grid-template-columns: 1fr;
       }
@@ -1484,8 +1501,20 @@
 
       <div class="recognition reveal">
         <p class="recognition-label">Recognition</p>
-        <p class="recognition-title">Minister of Science &amp; ICT Award · The Big Contest 2023</p>
-        <p class="recognition-detail">1st place / 740+ teams</p>
+        <div class="recognition-list">
+          <div class="recognition-item">
+            <p class="recognition-title">Minister of Science &amp; ICT Award · The Big Contest 2023</p>
+            <p class="recognition-detail">1st place / 740+ teams · Dec 2023</p>
+          </div>
+          <div class="recognition-item">
+            <p class="recognition-title">Gold Prize · The 5th Open Infrastructure Development Competition</p>
+            <p class="recognition-detail">Aug 2023</p>
+          </div>
+          <div class="recognition-item">
+            <p class="recognition-title">Grand Prize · The Regional Public Safety Data Analysis Contest</p>
+            <p class="recognition-detail">Feb 2023</p>
+          </div>
+        </div>
       </div>
     </section>
 
